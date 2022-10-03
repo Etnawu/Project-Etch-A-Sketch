@@ -18,8 +18,6 @@ body {
 
 .square {
     background: black;
-    width: 35px;
-    height: 35px;
   }
 
 #squareContainer {
@@ -30,8 +28,6 @@ body {
 
 .coloredSquare {
     background: white;
-    width: 35px;
-    height: 35px;
 }
 
 
