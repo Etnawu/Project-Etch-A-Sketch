@@ -8,6 +8,7 @@ body {
 #header {
     text-align: center;
     margin: 8vh;
+    
 }
 
 #container {
@@ -23,13 +24,8 @@ body {
 
 #squareContainer {
     display: grid;
-    grid-template-columns: repeat(16, 1fr);
-    grid-template-rows: repeat(16, 1fr);
-    height: 560px;
-    width: 560px;
-    border: 1px solid #eee;
-    box-shadow: 4px 8px 32px #eee;
-    border-radius: 3px;
+    height: 500px;
+    width: 500px;
 }
 
 .coloredSquare {
@@ -42,13 +38,13 @@ body {
 #controlPanel {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     width: 300px;
     height: auto;
-    width: 300px;
     padding: 16px;
 }
 
-button {
+#clearAll {
     border: none;
     border-radius: 8px;
     padding: 9px;
@@ -57,3 +53,20 @@ button {
     color: #eee;
 }
 
+#clearAll:active {
+    border: none;
+    border-radius: 8px;
+    padding: 8px;
+    margin: auto;
+    background-color: black;
+    color: #eee;
+}
+
+
+#sliderBanner {
+    text-align: center;
+}
+
+.filler {
+    margin: auto;
+}
