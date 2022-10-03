@@ -32,7 +32,13 @@ body {
 }
 
 .square:hover{
-    background: #eee;
+    background: white;
+    width: 35px;
+    height: 35px;
+}
+
+.coloredSquare {
+    background: white;
     width: 35px;
     height: 35px;
 }
