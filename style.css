@@ -1,0 +1,38 @@
+body {
+    background-color: #eee;
+    display: flex;
+    flex-direction: column;
+}
+
+
+#header {
+    text-align: center;
+}
+
+#container {
+    display: flex;
+}
+
+.square {
+    background: black;
+    width: 35px;
+    height: 35px;
+  }
+
+#squareContainer {
+    display: grid;
+    grid-template-columns: repeat(16, 1fr);
+    grid-template-rows: repeat(16, 1fr);
+    height: 560px;
+    width: 560px;
+    margin: auto;
+    border: 1px solid #eee;
+    box-shadow: 4px 8px 32px #eee;
+    border-radius: 3px;
+}
+
+.square:hover{
+    background: #eee;
+    width: 35px;
+    height: 35px;
+}
