@@ -7,10 +7,12 @@ body {
 
 #header {
     text-align: center;
+    margin: 8vh;
 }
 
 #container {
     display: flex;
+    justify-content: center;
 }
 
 .square {
@@ -25,16 +27,9 @@ body {
     grid-template-rows: repeat(16, 1fr);
     height: 560px;
     width: 560px;
-    margin: auto;
     border: 1px solid #eee;
     box-shadow: 4px 8px 32px #eee;
     border-radius: 3px;
-}
-
-.square:hover{
-    background: white;
-    width: 35px;
-    height: 35px;
 }
 
 .coloredSquare {
@@ -42,3 +37,23 @@ body {
     width: 35px;
     height: 35px;
 }
+
+
+#controlPanel {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    height: auto;
+    width: 300px;
+    padding: 16px;
+}
+
+button {
+    border: none;
+    border-radius: 8px;
+    padding: 9px;
+    margin: auto;
+    background-color: black;
+    color: #eee;
+}
+
