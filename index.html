@@ -4,34 +4,29 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="An interactive Etch-A-Sketch drawing app">
     <title>Etch-A-Sketch</title>
     <script src="main.js" defer></script>
-    <link rel="stylesheet" href="style.css"></link>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div id="header">Etch-A-Sketch</div>
+    <div id="header">Etch-A-Sketch+</div>
     <div id="container">
         <div id="controlPanel">
-            
             <div class="filler"></div>
-            <button id="empty">Empty</button>
-            <button id="clearAll">Clear All!</button>
-            <div id="sliderBanner">Grid Slider</div>
-            <input 
-                type="range" 
-                id="gridSlider" 
-                min="1" 
-                max="100"
-                value="16"
-                onchange="changeSize(this.value)"/>
+            <button id="eraserBtn" aria-label="Switch to eraser tool">Eraser</button>
+            <button id="clearAll" aria-label="Empty the drawing">Clear All</button>
+            <label for="gridSizeSelect">Grid Size</label>
+        <select id="gridSizeSelect" aria-label="Grid size selector">
+            <option value="16" selected>16 x 16</option>
+            <option value="32">32 x 32</option>
+            <option value="64">64 x 64</option>
+        </select>
+            <label for="colorPicker">Color Picker</label>
+            <input type="color" id="colorPicker">
             <div class="filler"></div>
         </div>
-
-
-
-    
-        <div id="squareContainer"></div>
-
+        <div id="squareContainer" role="grid" aria-label="Etch-a-sketch drawing board"></div>
     </div>
 </body>
 </html>

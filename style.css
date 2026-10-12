@@ -1,67 +1,115 @@
-body {
-    background-color: #eee;
-    display: flex;
-    flex-direction: column;
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
+body {
+    background-color: #0f172a; /* Sleek dark slate background */
+    color: #f8fafc;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
 
 #header {
     text-align: center;
-    margin: 8vh;
-    
+    margin-bottom: 24px;
+    font-size: 1.75rem;
+    font-weight: 700;
+    letter-spacing: -0.025em;
+    color: #f1f5f9;
 }
 
 #container {
     display: flex;
     justify-content: center;
+    align-items: center;
+    gap: 32px;
+    background-color: #1e293b; /* Card container */
+    padding: 32px;
+    border-radius: 20px;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.4), 0 8px 10px -6px rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.05);
 }
-
-.square {
-    background: black;
-  }
-
-#squareContainer {
-    display: grid;
-    height: 500px;
-    width: 500px;
-}
-
-.coloredSquare {
-    background: white;
-}
-
 
 #controlPanel {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    flex-shrink: 1;
-    width: 300px;
-    height: auto;
-    padding: 16px;
+    width: 180px;
+    gap: 12px;
 }
 
-button {
+button, select {
     border: none;
-    border-radius: 8px;
-    padding: 9px;
-    margin-top: 30px;
-    margin-bottom: 30px;
-    margin-left: 110px;
-    margin-right: 110px;
-    background-color: black;
-    color: #eee;
-}
-
-button:active {
-    scale: 0.98;
-}
-
-
-#sliderBanner {
+    border-radius: 10px;
+    padding: 12px 16px;
+    background-color: #334155;
+    color: #f8fafc;
+    font-weight: 600;
+    font-size: 0.9rem;
+    cursor: pointer;
+    width: 100%;
+    transition: all 0.2s ease;
     text-align: center;
 }
 
-.filler {
-    margin: 1px;
+button:hover {
+    background-color: #475569;
+    transform: translateY(-1px);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+/* Active tool state indicator */
+button.active {
+    background-color: #3b82f6; /* Modern electric blue */
+    color: white;
+}
+
+select {
+    appearance: none;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23f8fafc' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3e%3C/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    background-size: 16px;
+}
+
+label {
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #94a3b8;
+    margin-top: 4px;
+}
+
+#colorPicker {
+    width: 100%;
+    height: 40px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    background: transparent;
+}
+
+#squareContainer {
+    display: grid;
+    height: 450px;
+    width: 450px;
+    background-color: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.06);
+    user-select: none;
+}
+
+.square {
+    background: #ffffff;
+    border: 1px solid #f1f5f9;
 }
